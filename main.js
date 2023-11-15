@@ -50,3 +50,18 @@ let rendomPropValue = words[rendomPropName];
 let rendomValueNumber = Math.floor(Math.random() * rendomPropValue.length);
 let rendomValueValue = rendomPropValue[rendomValueNumber];
 document.querySelector(".game-info .category span").innerHTML = rendomPropName;
+let lettersGuessContainer = document.querySelector(".letters-guess");
+let lettersAndSpace = Array.from(rendomValueValue);
+lettersAndSpace.forEach((letter) => {
+  let emptySpan = document.createElement("span");
+  if (letter === " ") {
+    emptySpan.className = "with-space";
+  }
+  lettersGuessContainer.appendChild(emptySpan);
+});
+document.addEventListener("click", (e) => {
+  if (e.target.className === "letter-box") {
+    e.target.classList.add("clicked");
+    let theClickedLetter = e.target.innerHTML.toLowerCase();
+  }
+});
