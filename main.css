@@ -149,6 +149,11 @@ hr {
   cursor: pointer;
   margin-bottom: 10px;
 }
+.letters .letter-box.clicked {
+  background-color: #222;
+  opacity: 0.2;
+  pointer-events: none;
+}
 .letters-guess {
   margin: 10px auto;
   background-color: #f8f8f8;

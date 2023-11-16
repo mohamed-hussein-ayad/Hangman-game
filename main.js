@@ -10,37 +10,35 @@ lettersArray.forEach((letter) => {
   lettersContainer.appendChild(span);
 });
 
-const words = {
-  programming: ["Python", "Javascript", "Go", "Java", "Kotlin", "PHP"],
+let words = {
+  programming: [
+    "php",
+    "javascript",
+    "go",
+    "scala",
+    "fortran",
+    "r",
+    "mysql",
+    "python",
+  ],
   movies: [
-    "Three Days of the Condor",
-    "Kill Bill",
-    "The Place Beyond the Pines",
-    " Bang the Drum Slowly",
-    "Shawshank Redemption",
-    "The Longest Day",
-    "Things to Do in Denver When You're Dead",
-    "A Clockwork Orange",
+    "Prestige",
+    "Inception",
+    "Parasite",
+    "Interstellar",
+    "Whiplash",
+    "Memento",
+    "Coco",
+    "Up",
   ],
   people: [
-    "Robert De Niro",
-    "Jack Nicholson",
-    "Marlon Brando",
-    " Denzel Washington",
-    "Katharine Hepburn",
-    "Humphrey Bogart",
-    "Meryl Streep",
-    "Daniel Day-Lewis",
+    "Albert Einstein",
+    "Hitchcock",
+    "Alexander",
+    "Cleopatra",
+    "Mahatma Ghandi",
   ],
-  countries: [
-    "Afghanistan",
-    "Bolivia",
-    "Dominica",
-    "France",
-    "Ghana",
-    "Indonesia",
-    "Indonesia",
-  ],
+  countries: ["Syria", "Palestine", "Yemen", "Egypt", "Bahrain", "Qatar"],
 };
 
 let allKays = Object.keys(words);
@@ -59,9 +57,16 @@ lettersAndSpace.forEach((letter) => {
   }
   lettersGuessContainer.appendChild(emptySpan);
 });
+let guessSpans = document.querySelector(".letters-guess span");
 document.addEventListener("click", (e) => {
   if (e.target.className === "letter-box") {
     e.target.classList.add("clicked");
     let theClickedLetter = e.target.innerHTML.toLowerCase();
+    let theChoosenWord = Array.from(rendomValueValue.toLowerCase());
+    theChoosenWord.forEach((wordLetter, wordIndex) => {
+      if (theClickedLetter == wordLetter) {
+        console;
+      }
+    });
   }
 });
